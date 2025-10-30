@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Présentation — Aimen</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header>
+        <section class="profil">
+            <img class="avatar" src="img/ma_photo.jpeg" alt="Photo de profil d’Aimen" />
+            <div>
+                <h1 id="titre-profil">Aimen B.</h1>
+                <p class="sous-titre">Étudiant · Spécialisation Systèmes & Réseaux</p>
+            </div>
+        </section>
+
+        <nav class="nav-principal" aria-label="Navigation principale">
+            <a href="#a-propos">À propos</a>
+            <a href="#mes-liens">Liens</a>
+            <a href="#ma-video">Vidéo</a>
+        </nav>
+    </header>
+
+    <!-- Corps -->
+    <main>
+        <section id="a-propos" class="section">
+            <h2>À propos</h2>
+            <p>
+                Salut, moi c’est Aimen. Après un parcours de dev, je me concentre désormais sur les systèmes et les réseaux. J’aime
+                apprendre en groupe, échanger des bonnes pratiques et partager ce que je découvre, tout en travaillant la stabilité, la
+                sécurité et la rapidité des environnements.
+            </p>
+        </section>
+
+        <section id="mes-liens" class="section">
+            <h2>Mes liens préférés</h2>
+            <ul class="liste-liens">
+                <!-- Ouvre le lien dans un nouvel onglet = target="_blank" -->
+                <!-- Sécurité : empêche la nouvelle page d’accéder à window.opener = rel="noopener" -->
+                <li><a href="https://ozint.eu/" target="_blank" rel="noopener">OSINTOPIA (anciennement OZINT) </a></li>
+                <li><a href="https://wiki.archlinux.org/" target="_blank" rel="noopener">Arch Wiki</a></li>
+                <li><a href="https://www.rfc-editor.org/" target="_blank" rel="noopener">RFC Editor</a></li>
+                <li><a href="https://www.cloudflare.com/learning/" target="_blank" rel="noopener">Cloudflare Learning</a></li>
+            </ul>
+        </section>
+
+        <section id="ma-video" class="section">
+            <h2>Vidéo YouTube</h2>
+            <p>Une introduction claire à des notions réseau :</p>
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/72snZctFFtA" title="DNS explained" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p class="devise">« La simplicité guide le partage, le partage trace le chemin. »</p>
+    </footer>
+</body>
+
+</html>

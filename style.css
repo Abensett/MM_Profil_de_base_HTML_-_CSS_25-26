@@ -1,0 +1,203 @@
+/* Import des les polices avant le reste */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Momo+Trust+Sans:wght@200..800&display=swap');
+
+/* Variables de thème (palette + constantes de layout) */
+:root {
+    --bg: #1e1713;
+    --surface: #2a201b;
+    --text: #efe7e3;
+    --muted: #c9b9b0;
+    --accent: #b9855e;
+    --radius: 12px;
+    --maxw: 960px;
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+/* Width/height incluent padding + border (layout plus prévisible) */
+body {
+    margin: 0;
+    font-family: "Momo Trust Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+header,
+main,
+footer {
+    max-width: var(--maxw);
+    /* Limite la largeur lisible du contenu */
+    margin: 0 auto;
+    /* Centre horizontalement */
+    padding: 20px;
+}
+
+/* En-tête */
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    /* Séparateur discret */
+}
+
+.profil-section {
+    display: flex;
+    /* Aligne avatar + texte sur une ligne */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    gap: 12px;
+    /* Espacement homogène sans marges individuelles */
+    margin-bottom: 12px;
+}
+
+/* Image: redimension + arrondi */
+.avatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* Remplit le cadre sans déformer */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    /* bordure très légere  */
+}
+
+/* Titres avec Bitcount */
+h1, h2 {
+    font-family: "Bitcount Grid Single", "Momo Trust Sans", sans-serif;
+    /* Police titres + fallback si les fonts ne sont plus dispos ou autre*/
+    margin: 0 0 1px;
+}
+
+h1 {
+    font-size: 26px;
+    color: var(--accent);
+}
+
+h2 {
+    font-size: 25px;
+    color: var(--accent);
+}
+
+.sous-titre {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* Navigation simple + hover */
+.nav-principal {
+    display: flex;
+    /* Liens en ligne */
+    gap: 8px;
+    /* Espacement homogène */
+    flex-wrap: wrap;
+    /* Retour à la ligne si manque d’espace  */
+    margin-top: 8px;
+}
+
+.nav-principal a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+    /* Hover fluide */
+    border: 1px solid transparent;
+    /* Évite le saut de mise en page au survol */
+}
+
+.nav-principal a:hover {
+    color: var(--text);
+    background: rgba(185, 133, 94, 0.15);
+    /* Légère mise en évidence au hover */
+    border-color: rgba(185, 133, 94, 0.3);
+}
+
+/* Sections sobres */
+.section {
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Délimitation douce */
+    border-radius: var(--radius);
+    padding: 16px;
+    margin: 16px 0;
+}
+
+/* Liens favoris */
+.liste-liens {
+    padding-left: 18px;
+    /* Conserve l’alignement des puces du ul */
+    margin: 8px 0 0;
+}
+
+.liste-liens a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.liste-liens a:hover {
+    text-decoration: underline;
+}
+
+/* Feedback accessible et simple */
+
+/* Vidéo responsive: simple et efficace */
+.video-wrap {
+    position: relative;
+    /* Contexte pour l’iframe en position absolue */
+    width: 100%;
+    max-width: 800px;
+    /* Lecture sur grands écrans */
+    aspect-ratio: 16/9;
+    /* Maintient un ratio vidéo sans hacks */
+    border-radius: 10px;
+    overflow: hidden;
+    /* Cache les débords avec les coins arrondis */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #201915;
+    /* Couleur de fond si l’iframe tarde à charger */
+}
+
+.video-wrap iframe,
+.video-wrap video {
+    position: absolute;
+    /* Se positionne par rapport à .video-wrap */
+    inset: 0;
+    /* Colle aux 4 bords (top/right/bottom/left: 0) */
+    width: 100%;
+    height: 100%;
+    /* Remplit exactement le conteneur au ratio */
+}
+
+/* Pied de page */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    /* Séparateur discret */
+    color: var(--muted);
+    text-align: center;
+}
+
+.devise {
+    margin: 10px 0 0;
+    font-style: italic;
+}
+
+/* Responsive basique */
+@media (max-width: 640px) {
+
+    /* Ajustements pour petits écrans */
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Garde de bonnes proportions en mobile */
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}
