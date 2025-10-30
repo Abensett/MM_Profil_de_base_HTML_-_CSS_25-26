@@ -26,3 +26,6 @@ Arborescence
 Bonnes pratiques
 - Liens externes: target="_blank" rel="noopener".
 - Teste avec “Go Live” (VS Code).
+
+Accès
+- [Lien vers le template](https://abensett.github.io/MM_Profil_de_base_HTML_-_CSS_25-26)
